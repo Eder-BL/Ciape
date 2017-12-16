@@ -11,7 +11,7 @@ using Ciape.Modelo;
 namespace Ciape.Banco {
     public class RevisaoDataAccess {
 
-        private static SqlCeConnection con = new SqlCeConnection(@"Data Source = C:\Users\Eder\source\repos\Ciape\Ciape\Banco\Banco.sdf");
+        private static SqlCeConnection con = new SqlCeConnection(@"Data Source = C:\Users\Eder\source\repos\Solucao05\Ciape\Banco\Banco.sdf");
 
         public static DataTable PegarRevisoes() {
 
