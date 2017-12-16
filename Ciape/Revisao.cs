@@ -57,7 +57,7 @@ namespace Ciape {
             else {
                 //erro na validação
                 StringBuilder sb = new StringBuilder();
-                foreach(ValidationResult erro in listErros) {
+                foreach (ValidationResult erro in listErros) {
                     sb.Append(erro.ErrorMessage + "\n");
                 }
                 lblErros.Text = sb.ToString();
@@ -65,6 +65,14 @@ namespace Ciape {
         }
 
         private void txtDescricao_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void ExcluirAction(object sender, EventArgs e) {
+
+            int id = (int)dgvRevisao.SelectedRows[0].Cells[0].Value;
+            Banco.RevisaoDataAccess.ExcluirRevisao(id);
+            AtualizarTabela();
 
         }
     }

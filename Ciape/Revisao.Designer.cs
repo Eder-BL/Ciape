@@ -31,20 +31,20 @@
             this.btnAprovar = new System.Windows.Forms.Button();
             this.lblErros = new System.Windows.Forms.Label();
             this.tabRevisao = new System.Windows.Forms.TabControl();
-            this.tabPendentes = new System.Windows.Forms.TabPage();
-            this.tabAprovados = new System.Windows.Forms.TabPage();
             this.tabCorrigir = new System.Windows.Forms.TabPage();
-            this.dgvCorrigir = new System.Windows.Forms.DataGridView();
-            this.btnCorrigir = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnPendente = new System.Windows.Forms.Button();
+            this.dgvCorrigir = new System.Windows.Forms.DataGridView();
+            this.tabPendentes = new System.Windows.Forms.TabPage();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCorrigir = new System.Windows.Forms.Button();
+            this.tabAprovados = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRevisao)).BeginInit();
             this.tabRevisao.SuspendLayout();
-            this.tabPendentes.SuspendLayout();
-            this.tabAprovados.SuspendLayout();
             this.tabCorrigir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCorrigir)).BeginInit();
+            this.tabPendentes.SuspendLayout();
+            this.tabAprovados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,6 +140,41 @@
             this.tabRevisao.Size = new System.Drawing.Size(751, 319);
             this.tabRevisao.TabIndex = 7;
             // 
+            // tabCorrigir
+            // 
+            this.tabCorrigir.Controls.Add(this.btnPendente);
+            this.tabCorrigir.Controls.Add(this.dgvCorrigir);
+            this.tabCorrigir.ForeColor = System.Drawing.Color.Black;
+            this.tabCorrigir.Location = new System.Drawing.Point(4, 26);
+            this.tabCorrigir.Name = "tabCorrigir";
+            this.tabCorrigir.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCorrigir.Size = new System.Drawing.Size(743, 289);
+            this.tabCorrigir.TabIndex = 2;
+            this.tabCorrigir.Text = "Corrigir";
+            this.tabCorrigir.UseVisualStyleBackColor = true;
+            // 
+            // btnPendente
+            // 
+            this.btnPendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
+            this.btnPendente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPendente.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.btnPendente.ForeColor = System.Drawing.Color.White;
+            this.btnPendente.Location = new System.Drawing.Point(423, 247);
+            this.btnPendente.Name = "btnPendente";
+            this.btnPendente.Size = new System.Drawing.Size(314, 36);
+            this.btnPendente.TabIndex = 8;
+            this.btnPendente.Text = "Enviar para aprovação";
+            this.btnPendente.UseVisualStyleBackColor = false;
+            // 
+            // dgvCorrigir
+            // 
+            this.dgvCorrigir.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCorrigir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCorrigir.Location = new System.Drawing.Point(3, 6);
+            this.dgvCorrigir.Name = "dgvCorrigir";
+            this.dgvCorrigir.Size = new System.Drawing.Size(736, 236);
+            this.dgvCorrigir.TabIndex = 0;
+            // 
             // tabPendentes
             // 
             this.tabPendentes.BackColor = System.Drawing.Color.Transparent;
@@ -156,38 +191,19 @@
             this.tabPendentes.TabIndex = 0;
             this.tabPendentes.Text = "Pendentes";
             // 
-            // tabAprovados
+            // btnExcluir
             // 
-            this.tabAprovados.Controls.Add(this.dataGridView1);
-            this.tabAprovados.Location = new System.Drawing.Point(4, 26);
-            this.tabAprovados.Name = "tabAprovados";
-            this.tabAprovados.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAprovados.Size = new System.Drawing.Size(743, 289);
-            this.tabAprovados.TabIndex = 1;
-            this.tabAprovados.Text = "Aprovados";
-            this.tabAprovados.UseVisualStyleBackColor = true;
-            // 
-            // tabCorrigir
-            // 
-            this.tabCorrigir.Controls.Add(this.btnPendente);
-            this.tabCorrigir.Controls.Add(this.dgvCorrigir);
-            this.tabCorrigir.ForeColor = System.Drawing.Color.Black;
-            this.tabCorrigir.Location = new System.Drawing.Point(4, 26);
-            this.tabCorrigir.Name = "tabCorrigir";
-            this.tabCorrigir.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCorrigir.Size = new System.Drawing.Size(743, 289);
-            this.tabCorrigir.TabIndex = 2;
-            this.tabCorrigir.Text = "Corrigir";
-            this.tabCorrigir.UseVisualStyleBackColor = true;
-            // 
-            // dgvCorrigir
-            // 
-            this.dgvCorrigir.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCorrigir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCorrigir.Location = new System.Drawing.Point(3, 6);
-            this.dgvCorrigir.Name = "dgvCorrigir";
-            this.dgvCorrigir.Size = new System.Drawing.Size(736, 236);
-            this.dgvCorrigir.TabIndex = 0;
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(-1, 245);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(118, 36);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.ExcluirAction);
             // 
             // btnCorrigir
             // 
@@ -202,31 +218,16 @@
             this.btnCorrigir.Text = "Corrigir";
             this.btnCorrigir.UseVisualStyleBackColor = false;
             // 
-            // btnExcluir
+            // tabAprovados
             // 
-            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(-1, 245);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(118, 36);
-            this.btnExcluir.TabIndex = 7;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            // 
-            // btnPendente
-            // 
-            this.btnPendente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
-            this.btnPendente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPendente.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.btnPendente.ForeColor = System.Drawing.Color.White;
-            this.btnPendente.Location = new System.Drawing.Point(423, 247);
-            this.btnPendente.Name = "btnPendente";
-            this.btnPendente.Size = new System.Drawing.Size(314, 36);
-            this.btnPendente.TabIndex = 8;
-            this.btnPendente.Text = "Enviar para aprovação";
-            this.btnPendente.UseVisualStyleBackColor = false;
+            this.tabAprovados.Controls.Add(this.dataGridView1);
+            this.tabAprovados.Location = new System.Drawing.Point(4, 26);
+            this.tabAprovados.Name = "tabAprovados";
+            this.tabAprovados.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAprovados.Size = new System.Drawing.Size(743, 289);
+            this.tabAprovados.TabIndex = 1;
+            this.tabAprovados.Text = "Aprovados";
+            this.tabAprovados.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -254,10 +255,10 @@
             this.Load += new System.EventHandler(this.Revisao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRevisao)).EndInit();
             this.tabRevisao.ResumeLayout(false);
-            this.tabPendentes.ResumeLayout(false);
-            this.tabAprovados.ResumeLayout(false);
             this.tabCorrigir.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCorrigir)).EndInit();
+            this.tabPendentes.ResumeLayout(false);
+            this.tabAprovados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
