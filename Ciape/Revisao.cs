@@ -80,6 +80,7 @@ namespace Ciape {
             var campo = (TextBox)sender;
             if(campo.Text == "Descrição") {
                 campo.Text = "";
+                campo.ForeColor = Color.Black;
             }
         }
 
@@ -87,6 +88,7 @@ namespace Ciape {
             var campo = (TextBox)sender;
             if (campo.Text == "") {
                 campo.Text = "Descrição";
+                campo.ForeColor = Color.Silver;
             }
         }
 
@@ -94,6 +96,7 @@ namespace Ciape {
             var campo = (TextBox)sender;
             if (campo.Text == "Link") {
                 campo.Text = "";
+                campo.ForeColor = Color.Black;
             }
         }
 
@@ -101,6 +104,7 @@ namespace Ciape {
             var campo = (TextBox)sender;
             if (campo.Text == "") {
                 campo.Text = "Link";
+                campo.ForeColor = Color.Silver;
             }
         }
     }

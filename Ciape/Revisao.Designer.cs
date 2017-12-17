@@ -61,6 +61,7 @@
             // txtLink
             // 
             this.txtLink.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.txtLink.ForeColor = System.Drawing.Color.Silver;
             this.txtLink.Location = new System.Drawing.Point(378, 44);
             this.txtLink.Name = "txtLink";
             this.txtLink.Size = new System.Drawing.Size(392, 30);
@@ -72,6 +73,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.txtDescricao.ForeColor = System.Drawing.Color.Silver;
             this.txtDescricao.Location = new System.Drawing.Point(30, 44);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(342, 30);
