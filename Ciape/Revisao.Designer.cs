@@ -66,6 +66,8 @@
             this.txtLink.Size = new System.Drawing.Size(392, 30);
             this.txtLink.TabIndex = 1;
             this.txtLink.Text = "Link";
+            this.txtLink.Enter += new System.EventHandler(this.txtLink_Enter);
+            this.txtLink.Leave += new System.EventHandler(this.txtLink_Leave);
             // 
             // txtDescricao
             // 
@@ -76,6 +78,8 @@
             this.txtDescricao.TabIndex = 2;
             this.txtDescricao.Text = "Descrição";
             this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
+            this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
+            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
             // btnSalvar
             // 

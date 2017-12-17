@@ -75,5 +75,33 @@ namespace Ciape {
             AtualizarTabela();
 
         }
+
+        private void txtDescricao_Enter(object sender, EventArgs e) {
+            var campo = (TextBox)sender;
+            if(campo.Text == "Descrição") {
+                campo.Text = "";
+            }
+        }
+
+        private void txtDescricao_Leave(object sender, EventArgs e) {
+            var campo = (TextBox)sender;
+            if (campo.Text == "") {
+                campo.Text = "Descrição";
+            }
+        }
+
+        private void txtLink_Enter(object sender, EventArgs e) {
+            var campo = (TextBox)sender;
+            if (campo.Text == "Link") {
+                campo.Text = "";
+            }
+        }
+
+        private void txtLink_Leave(object sender, EventArgs e) {
+            var campo = (TextBox)sender;
+            if (campo.Text == "") {
+                campo.Text = "Link";
+            }
+        }
     }
 }
