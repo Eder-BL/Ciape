@@ -38,7 +38,7 @@ namespace Ciape {
             revisao.Link = txtLink.Text;
             revisao.Status = "Pendente";
             revisao.DataCadastro = DateTime.Now;
-
+            
             //Validar
             List<ValidationResult> listErros = new List<ValidationResult>();
             ValidationContext contexto = new ValidationContext(revisao);
@@ -64,9 +64,7 @@ namespace Ciape {
             }
         }
 
-        private void txtDescricao_TextChanged(object sender, EventArgs e) {
 
-        }
 
         private void ExcluirAction(object sender, EventArgs e) {
 

@@ -49,10 +49,12 @@ namespace Ciape {
             painelVisivel(pnPainel);
         }
 
+        //=========Indicador Laranja do MENU============//
         private void MoverIndicador(Button btnMenu) {
             pnIndicador.Location = new Point(pnIndicador.Location.X, btnMenu.Location.Y);
         }
 
+        //=========Painel visível============//
         private void painelVisivel(UserControl pn) {
             pnRevisao.Visible = false;
             pnSobre.Visible = false;
@@ -63,5 +65,28 @@ namespace Ciape {
             pn.Visible = true;
 
         }
+
+        //=========MOVER O PROGRAMA PELA BARRA SUPERIOR============//
+        private bool BotaoMousePressionado = false;
+        private Point PontoInicialFormulario;
+        private Point PontoInicialCursor;
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e) {
+            BotaoMousePressionado = true;
+            PontoInicialFormulario = this.Location;
+            PontoInicialCursor = Cursor.Position;
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e) {
+            BotaoMousePressionado = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e) {
+            if(BotaoMousePressionado == true) {
+                Point dif = Point.Subtract(Cursor.Position, new Size(PontoInicialCursor));
+                this.Location = Point.Add(PontoInicialFormulario, new Size(dif));
+            }
+        }
+
     }
 }

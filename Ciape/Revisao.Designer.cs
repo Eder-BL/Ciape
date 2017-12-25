@@ -79,7 +79,7 @@
             this.txtDescricao.Size = new System.Drawing.Size(342, 30);
             this.txtDescricao.TabIndex = 2;
             this.txtDescricao.Text = "Descrição";
-            this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
+           // this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
             this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
@@ -203,7 +203,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(-1, 245);
+            this.btnExcluir.Location = new System.Drawing.Point(6, 245);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(118, 36);
             this.btnExcluir.TabIndex = 7;

@@ -34,11 +34,11 @@
             this.btnPainel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.pnRevisao = new Ciape.Revisao();
             this.pnPainel = new Ciape.Painel();
-            this.pnSobre = new Ciape.Sobre();
             this.pnEnvios = new Ciape.Envios();
             this.pnUrgente = new Ciape.Urgente();
+            this.pnRevisao = new Ciape.Revisao();
+            this.pnSobre = new Ciape.Sobre();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,11 +46,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
+            this.panel1.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1025, 12);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // panel2
             // 
@@ -83,7 +87,7 @@
             this.btnSobre.ForeColor = System.Drawing.Color.White;
             this.btnSobre.Image = ((System.Drawing.Image)(resources.GetObject("btnSobre.Image")));
             this.btnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSobre.Location = new System.Drawing.Point(22, 553);
+            this.btnSobre.Location = new System.Drawing.Point(22, 549);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Size = new System.Drawing.Size(156, 58);
             this.btnSobre.TabIndex = 4;
@@ -100,7 +104,7 @@
             this.btnRevisao.ForeColor = System.Drawing.Color.White;
             this.btnRevisao.Image = ((System.Drawing.Image)(resources.GetObject("btnRevisao.Image")));
             this.btnRevisao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevisao.Location = new System.Drawing.Point(22, 424);
+            this.btnRevisao.Location = new System.Drawing.Point(22, 421);
             this.btnRevisao.Name = "btnRevisao";
             this.btnRevisao.Size = new System.Drawing.Size(156, 58);
             this.btnRevisao.TabIndex = 3;
@@ -117,7 +121,7 @@
             this.btnUrgente.ForeColor = System.Drawing.Color.White;
             this.btnUrgente.Image = ((System.Drawing.Image)(resources.GetObject("btnUrgente.Image")));
             this.btnUrgente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrgente.Location = new System.Drawing.Point(22, 295);
+            this.btnUrgente.Location = new System.Drawing.Point(22, 165);
             this.btnUrgente.Name = "btnUrgente";
             this.btnUrgente.Size = new System.Drawing.Size(156, 58);
             this.btnUrgente.TabIndex = 2;
@@ -134,7 +138,7 @@
             this.btnEnvios.ForeColor = System.Drawing.Color.White;
             this.btnEnvios.Image = ((System.Drawing.Image)(resources.GetObject("btnEnvios.Image")));
             this.btnEnvios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnvios.Location = new System.Drawing.Point(22, 166);
+            this.btnEnvios.Location = new System.Drawing.Point(22, 293);
             this.btnEnvios.Name = "btnEnvios";
             this.btnEnvios.Size = new System.Drawing.Size(156, 58);
             this.btnEnvios.TabIndex = 1;
@@ -183,14 +187,6 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // pnRevisao
-            // 
-            this.pnRevisao.BackColor = System.Drawing.Color.White;
-            this.pnRevisao.Location = new System.Drawing.Point(219, 144);
-            this.pnRevisao.Name = "pnRevisao";
-            this.pnRevisao.Size = new System.Drawing.Size(806, 540);
-            this.pnRevisao.TabIndex = 4;
-            // 
             // pnPainel
             // 
             this.pnPainel.BackColor = System.Drawing.Color.White;
@@ -199,14 +195,6 @@
             this.pnPainel.Size = new System.Drawing.Size(806, 658);
             this.pnPainel.TabIndex = 3;
             this.pnPainel.Load += new System.EventHandler(this.painel1_Load);
-            // 
-            // pnSobre
-            // 
-            this.pnSobre.BackColor = System.Drawing.Color.White;
-            this.pnSobre.Location = new System.Drawing.Point(216, 144);
-            this.pnSobre.Name = "pnSobre";
-            this.pnSobre.Size = new System.Drawing.Size(809, 540);
-            this.pnSobre.TabIndex = 5;
             // 
             // pnEnvios
             // 
@@ -223,6 +211,22 @@
             this.pnUrgente.Name = "pnUrgente";
             this.pnUrgente.Size = new System.Drawing.Size(806, 540);
             this.pnUrgente.TabIndex = 6;
+            // 
+            // pnRevisao
+            // 
+            this.pnRevisao.BackColor = System.Drawing.Color.White;
+            this.pnRevisao.Location = new System.Drawing.Point(219, 144);
+            this.pnRevisao.Name = "pnRevisao";
+            this.pnRevisao.Size = new System.Drawing.Size(806, 540);
+            this.pnRevisao.TabIndex = 4;
+            // 
+            // pnSobre
+            // 
+            this.pnSobre.BackColor = System.Drawing.Color.White;
+            this.pnSobre.Location = new System.Drawing.Point(216, 144);
+            this.pnSobre.Name = "pnSobre";
+            this.pnSobre.Size = new System.Drawing.Size(809, 540);
+            this.pnSobre.TabIndex = 5;
             // 
             // Form1
             // 
