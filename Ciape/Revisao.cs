@@ -21,6 +21,7 @@ namespace Ciape {
 
         public void AtualizarTabela() {
             dgvRevisao.DataSource = Banco.RevisaoDataAccess.PegarRevisoes();
+            dgvCorrigir.DataSource = Banco.RevisaoDataAccess.PegarCorrecoes();
         }
 
         private void label3_Click(object sender, EventArgs e) {
@@ -38,7 +39,7 @@ namespace Ciape {
             revisao.Link = txtLink.Text;
             revisao.Status = "Pendente";
             revisao.DataCadastro = DateTime.Now;
-            
+
             //Validar
             List<ValidationResult> listErros = new List<ValidationResult>();
             ValidationContext contexto = new ValidationContext(revisao);
@@ -64,6 +65,13 @@ namespace Ciape {
             }
         }
 
+        private void CorrigirAction(object sender, EventArgs e) {
+
+            int id = (int)dgvRevisao.SelectedRows[0].Cells[0].Value;
+            Banco.RevisaoDataAccess.CorrigirRevisao(id);
+            AtualizarTabela();
+
+        }
 
 
         private void ExcluirAction(object sender, EventArgs e) {
@@ -76,7 +84,7 @@ namespace Ciape {
 
         private void txtDescricao_Enter(object sender, EventArgs e) {
             var campo = (TextBox)sender;
-            if(campo.Text == "Descrição") {
+            if (campo.Text == "Descrição") {
                 campo.Text = "";
                 campo.ForeColor = Color.Black;
             }
@@ -105,5 +113,7 @@ namespace Ciape {
                 campo.ForeColor = Color.Silver;
             }
         }
+
+
     }
 }

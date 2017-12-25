@@ -23,6 +23,16 @@ namespace Ciape.Banco {
             return ds.Tables[0];
         }
 
+        public static DataTable PegarCorrecoes() {
+
+            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT Id, Descricao Descrição, Link, Status, DataCadastro Cadastro FROM Revisao WHERE Status='Corrigir'", con);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds);
+
+            return ds.Tables[0];
+        }
+
         public static bool ExcluirRevisao(int id) {
             string sql = "Delete from Revisao where Id=@id";
             SqlCeCommand comando = new SqlCeCommand(sql, con);
@@ -62,6 +72,24 @@ namespace Ciape.Banco {
 
         }
 
-        
+        public static bool CorrigirRevisao(int id) {
+
+            string sql = "Update Revisao set Status='Corrigir' where Id=@id";
+            SqlCeCommand comando = new SqlCeCommand(sql, con);
+
+            comando.Parameters.Add("@id", id);
+
+            con.Open();
+            if (comando.ExecuteNonQuery() > 0) {
+                con.Close();
+                return true;
+            }
+            else {
+                con.Close();
+                return false;
+            }
+        }
+
+
     }
 }

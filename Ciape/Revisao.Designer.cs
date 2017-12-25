@@ -79,7 +79,6 @@
             this.txtDescricao.Size = new System.Drawing.Size(342, 30);
             this.txtDescricao.TabIndex = 2;
             this.txtDescricao.Text = "Descrição";
-           // this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
             this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
@@ -223,6 +222,7 @@
             this.btnCorrigir.TabIndex = 6;
             this.btnCorrigir.Text = "Corrigir";
             this.btnCorrigir.UseVisualStyleBackColor = false;
+            this.btnCorrigir.Click += new System.EventHandler(this.CorrigirAction);
             // 
             // tabAprovados
             // 

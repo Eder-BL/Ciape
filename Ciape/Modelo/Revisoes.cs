@@ -11,10 +11,10 @@ namespace Ciape.Modelo {
 
         public int Id { get; set; }
 
-        [Required, StringLength(70, MinimumLength = 5)]
+        [StringLength(70, MinimumLength = 5)]
         public string Descricao { get; set; }
 
-        [Required, StringLength(100, MinimumLength = 5)]
+        [StringLength(100, MinimumLength = 5)]
         public string Link { get; set; }
 
         public string Status { get; set; }
