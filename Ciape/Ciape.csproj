@@ -54,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\RevisaoDataAccess.cs" />
+    <Compile Include="CorrigirOQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorrigirOQ.Designer.cs">
+      <DependentUpon>CorrigirOQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Envios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     <Compile Include="Revisao.Designer.cs">
       <DependentUpon>Revisao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Separar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Separar.Designer.cs">
+      <DependentUpon>Separar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sobre.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +105,9 @@
     <Compile Include="Urgente.Designer.cs">
       <DependentUpon>Urgente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CorrigirOQ.resx">
+      <DependentUpon>CorrigirOQ.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Envios.resx">
       <DependentUpon>Envios.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Revisao.resx">
       <DependentUpon>Revisao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Separar.resx">
+      <DependentUpon>Separar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sobre.resx">
       <DependentUpon>Sobre.cs</DependentUpon>

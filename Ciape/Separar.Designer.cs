@@ -1,5 +1,5 @@
 ﻿namespace Ciape {
-    partial class Envios {
+    partial class Separar {
         /// <summary> 
         /// Variável de designer necessária.
         /// </summary>
@@ -25,12 +25,12 @@
         private void InitializeComponent() {
             this.SuspendLayout();
             // 
-            // Envios
+            // Separar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Name = "Envios";
+            this.Name = "Separar";
             this.Size = new System.Drawing.Size(806, 658);
             this.ResumeLayout(false);
 

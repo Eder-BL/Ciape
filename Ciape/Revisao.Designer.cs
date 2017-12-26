@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 36F);
-            this.label1.Location = new System.Drawing.Point(16, 142);
+            this.label1.Location = new System.Drawing.Point(19, 264);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 58);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.txtLink.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.txtLink.ForeColor = System.Drawing.Color.Silver;
-            this.txtLink.Location = new System.Drawing.Point(378, 44);
+            this.txtLink.Location = new System.Drawing.Point(381, 166);
             this.txtLink.Name = "txtLink";
             this.txtLink.Size = new System.Drawing.Size(392, 30);
             this.txtLink.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.txtDescricao.ForeColor = System.Drawing.Color.Silver;
-            this.txtDescricao.Location = new System.Drawing.Point(30, 44);
+            this.txtDescricao.Location = new System.Drawing.Point(33, 166);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(342, 30);
             this.txtDescricao.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(652, 80);
+            this.btnSalvar.Location = new System.Drawing.Point(655, 202);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 36);
             this.btnSalvar.TabIndex = 3;
@@ -98,14 +98,16 @@
             // 
             // dgvRevisao
             // 
+            this.dgvRevisao.AllowUserToOrderColumns = true;
             this.dgvRevisao.BackgroundColor = System.Drawing.Color.White;
             this.dgvRevisao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRevisao.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvRevisao.Location = new System.Drawing.Point(1, 3);
             this.dgvRevisao.Name = "dgvRevisao";
             this.dgvRevisao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRevisao.Size = new System.Drawing.Size(736, 236);
+            this.dgvRevisao.Size = new System.Drawing.Size(738, 236);
             this.dgvRevisao.TabIndex = 4;
+            this.dgvRevisao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRevisao_CellContentClick);
             // 
             // btnAprovar
             // 
@@ -126,7 +128,7 @@
             this.lblErros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.lblErros.Font = new System.Drawing.Font("Century Gothic", 8F);
             this.lblErros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
-            this.lblErros.Location = new System.Drawing.Point(27, 117);
+            this.lblErros.Location = new System.Drawing.Point(30, 239);
             this.lblErros.Name = "lblErros";
             this.lblErros.Size = new System.Drawing.Size(0, 16);
             this.lblErros.TabIndex = 6;
@@ -138,7 +140,7 @@
             this.tabRevisao.Controls.Add(this.tabAprovados);
             this.tabRevisao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRevisao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabRevisao.Location = new System.Drawing.Point(26, 203);
+            this.tabRevisao.Location = new System.Drawing.Point(29, 325);
             this.tabRevisao.Name = "tabRevisao";
             this.tabRevisao.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabRevisao.SelectedIndex = 0;
@@ -257,7 +259,7 @@
             this.Controls.Add(this.txtLink);
             this.Controls.Add(this.label1);
             this.Name = "Revisao";
-            this.Size = new System.Drawing.Size(780, 525);
+            this.Size = new System.Drawing.Size(806, 658);
             this.Load += new System.EventHandler(this.Revisao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRevisao)).EndInit();
             this.tabRevisao.ResumeLayout(false);

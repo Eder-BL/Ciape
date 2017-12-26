@@ -35,7 +35,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 36F);
-            this.label1.Location = new System.Drawing.Point(41, 59);
+            this.label1.Location = new System.Drawing.Point(38, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 58);
             this.label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 28F);
-            this.label2.Location = new System.Drawing.Point(542, 72);
+            this.label2.Location = new System.Drawing.Point(539, 247);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 45);
             this.label2.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label3.Location = new System.Drawing.Point(546, 137);
+            this.label3.Location = new System.Drawing.Point(543, 312);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 22);
             this.label3.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label4.Location = new System.Drawing.Point(47, 182);
+            this.label4.Location = new System.Drawing.Point(44, 357);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(191, 44);
             this.label4.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label5.Location = new System.Drawing.Point(47, 204);
+            this.label5.Location = new System.Drawing.Point(44, 379);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 22);
             this.label5.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label6.Location = new System.Drawing.Point(47, 328);
+            this.label6.Location = new System.Drawing.Point(44, 503);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(415, 66);
             this.label6.TabIndex = 5;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Sobre";
-            this.Size = new System.Drawing.Size(780, 525);
+            this.Size = new System.Drawing.Size(806, 658);
             this.Load += new System.EventHandler(this.Sobre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

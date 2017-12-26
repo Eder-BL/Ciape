@@ -29,6 +29,11 @@ namespace Ciape {
             painelVisivel(pnEnvios);
         }
 
+        private void btnSeparar_Click(object sender, EventArgs e) {
+            MoverIndicador((Button)sender);
+            painelVisivel(pnSeparar);
+        }
+
         private void btnUrgente_Click(object sender, EventArgs e) {
             MoverIndicador((Button)sender);
             painelVisivel(pnUrgente);
@@ -61,6 +66,7 @@ namespace Ciape {
             pnPainel.Visible = false;
             pnUrgente.Visible = false;
             pnEnvios.Visible = false;
+            pnSeparar.Visible = false;
 
             pn.Visible = true;
 
@@ -87,6 +93,7 @@ namespace Ciape {
                 this.Location = Point.Add(PontoInicialFormulario, new Size(dif));
             }
         }
+
 
     }
 }

@@ -67,9 +67,9 @@ namespace Ciape {
 
         private void CorrigirAction(object sender, EventArgs e) {
 
-            int id = (int)dgvRevisao.SelectedRows[0].Cells[0].Value;
-            Banco.RevisaoDataAccess.CorrigirRevisao(id);
-            AtualizarTabela();
+            CorrigirOQ corr = new CorrigirOQ();
+            corr.lblID.Text = this.dgvRevisao.CurrentRow.Cells[0].Value.ToString();
+            corr.ShowDialog();
 
         }
 
@@ -115,5 +115,9 @@ namespace Ciape {
         }
 
 
+    //===================PEGAR DADOS DO DGV PARA CORRIGIR=====================//
+        private void dgvRevisao_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+      
+        }
     }
 }

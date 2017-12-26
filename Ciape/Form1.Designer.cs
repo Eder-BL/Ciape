@@ -39,6 +39,8 @@
             this.pnUrgente = new Ciape.Urgente();
             this.pnRevisao = new Ciape.Revisao();
             this.pnSobre = new Ciape.Sobre();
+            this.pnSeparar = new Ciape.Separar();
+            this.btnSeparar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +61,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.panel2.Controls.Add(this.btnSeparar);
             this.panel2.Controls.Add(this.pnIndicador);
             this.panel2.Controls.Add(this.btnSobre);
             this.panel2.Controls.Add(this.btnRevisao);
@@ -87,7 +90,7 @@
             this.btnSobre.ForeColor = System.Drawing.Color.White;
             this.btnSobre.Image = ((System.Drawing.Image)(resources.GetObject("btnSobre.Image")));
             this.btnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSobre.Location = new System.Drawing.Point(22, 549);
+            this.btnSobre.Location = new System.Drawing.Point(22, 547);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Size = new System.Drawing.Size(156, 58);
             this.btnSobre.TabIndex = 4;
@@ -104,7 +107,7 @@
             this.btnRevisao.ForeColor = System.Drawing.Color.White;
             this.btnRevisao.Image = ((System.Drawing.Image)(resources.GetObject("btnRevisao.Image")));
             this.btnRevisao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevisao.Location = new System.Drawing.Point(22, 421);
+            this.btnRevisao.Location = new System.Drawing.Point(22, 445);
             this.btnRevisao.Name = "btnRevisao";
             this.btnRevisao.Size = new System.Drawing.Size(156, 58);
             this.btnRevisao.TabIndex = 3;
@@ -121,7 +124,7 @@
             this.btnUrgente.ForeColor = System.Drawing.Color.White;
             this.btnUrgente.Image = ((System.Drawing.Image)(resources.GetObject("btnUrgente.Image")));
             this.btnUrgente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrgente.Location = new System.Drawing.Point(22, 165);
+            this.btnUrgente.Location = new System.Drawing.Point(22, 139);
             this.btnUrgente.Name = "btnUrgente";
             this.btnUrgente.Size = new System.Drawing.Size(156, 58);
             this.btnUrgente.TabIndex = 2;
@@ -138,7 +141,7 @@
             this.btnEnvios.ForeColor = System.Drawing.Color.White;
             this.btnEnvios.Image = ((System.Drawing.Image)(resources.GetObject("btnEnvios.Image")));
             this.btnEnvios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnvios.Location = new System.Drawing.Point(22, 293);
+            this.btnEnvios.Location = new System.Drawing.Point(22, 343);
             this.btnEnvios.Name = "btnEnvios";
             this.btnEnvios.Size = new System.Drawing.Size(156, 58);
             this.btnEnvios.TabIndex = 1;
@@ -190,7 +193,7 @@
             // pnPainel
             // 
             this.pnPainel.BackColor = System.Drawing.Color.White;
-            this.pnPainel.Location = new System.Drawing.Point(207, 26);
+            this.pnPainel.Location = new System.Drawing.Point(214, 21);
             this.pnPainel.Name = "pnPainel";
             this.pnPainel.Size = new System.Drawing.Size(806, 658);
             this.pnPainel.TabIndex = 3;
@@ -199,34 +202,59 @@
             // pnEnvios
             // 
             this.pnEnvios.BackColor = System.Drawing.Color.White;
-            this.pnEnvios.Location = new System.Drawing.Point(219, 144);
+            this.pnEnvios.Location = new System.Drawing.Point(213, 22);
             this.pnEnvios.Name = "pnEnvios";
-            this.pnEnvios.Size = new System.Drawing.Size(806, 540);
+            this.pnEnvios.Size = new System.Drawing.Size(806, 658);
             this.pnEnvios.TabIndex = 7;
             // 
             // pnUrgente
             // 
             this.pnUrgente.BackColor = System.Drawing.Color.White;
-            this.pnUrgente.Location = new System.Drawing.Point(219, 144);
+            this.pnUrgente.Location = new System.Drawing.Point(214, 26);
             this.pnUrgente.Name = "pnUrgente";
-            this.pnUrgente.Size = new System.Drawing.Size(806, 540);
+            this.pnUrgente.Size = new System.Drawing.Size(806, 658);
             this.pnUrgente.TabIndex = 6;
             // 
             // pnRevisao
             // 
             this.pnRevisao.BackColor = System.Drawing.Color.White;
-            this.pnRevisao.Location = new System.Drawing.Point(219, 144);
+            this.pnRevisao.Location = new System.Drawing.Point(216, 22);
             this.pnRevisao.Name = "pnRevisao";
-            this.pnRevisao.Size = new System.Drawing.Size(806, 540);
+            this.pnRevisao.Size = new System.Drawing.Size(806, 658);
             this.pnRevisao.TabIndex = 4;
             // 
             // pnSobre
             // 
             this.pnSobre.BackColor = System.Drawing.Color.White;
-            this.pnSobre.Location = new System.Drawing.Point(216, 144);
+            this.pnSobre.Location = new System.Drawing.Point(213, 21);
             this.pnSobre.Name = "pnSobre";
-            this.pnSobre.Size = new System.Drawing.Size(809, 540);
+            this.pnSobre.Size = new System.Drawing.Size(806, 658);
             this.pnSobre.TabIndex = 5;
+            // 
+            // pnSeparar
+            // 
+            this.pnSeparar.BackColor = System.Drawing.Color.White;
+            this.pnSeparar.Location = new System.Drawing.Point(216, 22);
+            this.pnSeparar.Name = "pnSeparar";
+            this.pnSeparar.Size = new System.Drawing.Size(806, 658);
+            this.pnSeparar.TabIndex = 8;
+            // 
+            // btnSeparar
+            // 
+            this.btnSeparar.FlatAppearance.BorderSize = 0;
+            this.btnSeparar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeparar.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.btnSeparar.ForeColor = System.Drawing.Color.White;
+            this.btnSeparar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeparar.Image")));
+            this.btnSeparar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeparar.Location = new System.Drawing.Point(22, 241);
+            this.btnSeparar.Name = "btnSeparar";
+            this.btnSeparar.Size = new System.Drawing.Size(156, 58);
+            this.btnSeparar.TabIndex = 7;
+            this.btnSeparar.Text = "Separar";
+            this.btnSeparar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSeparar.UseVisualStyleBackColor = true;
+            this.btnSeparar.Click += new System.EventHandler(this.btnSeparar_Click);
             // 
             // Form1
             // 
@@ -234,8 +262,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1025, 687);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnPainel);
@@ -243,6 +271,7 @@
             this.Controls.Add(this.pnUrgente);
             this.Controls.Add(this.pnRevisao);
             this.Controls.Add(this.pnSobre);
+            this.Controls.Add(this.pnSeparar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = " ";
@@ -269,6 +298,8 @@
         private System.Windows.Forms.Panel pnIndicador;
         private Urgente pnUrgente;
         private Envios pnEnvios;
+        private Separar pnSeparar;
+        private System.Windows.Forms.Button btnSeparar;
     }
 }
 

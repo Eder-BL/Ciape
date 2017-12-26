@@ -31,7 +31,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Name = "Urgente";
-            this.Size = new System.Drawing.Size(780, 525);
+            this.Size = new System.Drawing.Size(806, 658);
             this.ResumeLayout(false);
 
         }
