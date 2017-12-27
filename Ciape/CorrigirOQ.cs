@@ -7,24 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ciape.Modelo;
+using System.ComponentModel.DataAnnotations;
 using Ciape.Banco;
 
 
 namespace Ciape {
-    public partial class CorrigirOQ : Form {
+    public partial class CorrigirOQ : Form  {
         public CorrigirOQ() {
             InitializeComponent();
         }
 
         private void btnCorrige_Click(object sender, EventArgs e) {
-         //   try {
-         //       int id = (int)RevisaoDataAccess.dgvRevisao.SelectedRows[0].Cells[0].Value;
-         //      Banco.RevisaoDataAccess.CorrigirRevisao(id);
-         //      Revisao.AtualizarTabela();
-          //  }
-         //   catch {
-          //      MessageBox.Show("Não há nada para corrigir nessa linha", "Erro - Sem ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          //  }
+
+            try {
+                string lbl = lblID.Text;
+                int id = Convert.ToInt32(lbl);
+                string correcao = txtCorrecoes.Text.Trim();
+                Banco.RevisaoDataAccess.CorrigirRevisao(id, correcao);
+
+            }
+            catch {
+                MessageBox.Show("Erro no envio das informações!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Close();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e) {
+            Close();
+        }
+
+        private void CorrigirOQ_Load(object sender, EventArgs e) {
+
         }
     }
 }

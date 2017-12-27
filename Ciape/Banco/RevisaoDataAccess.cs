@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlServerCe;
 using Ciape.Modelo;
+using System.ComponentModel.DataAnnotations;
+using Ciape.Banco;
 
 
 namespace Ciape.Banco {
@@ -25,7 +27,7 @@ namespace Ciape.Banco {
 
         public static DataTable PegarCorrecoes() {
 
-            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT Id, Descricao Descrição, Link, Status, DataCadastro Cadastro FROM Revisao WHERE Status='Corrigir'", con);
+            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT Id, Descricao Descrição, Link, Corrigir, Status, DataCadastro Cadastro FROM Revisao WHERE Status='Corrigir'", con);
             DataSet ds = new DataSet();
 
             da.Fill(ds);
@@ -72,9 +74,29 @@ namespace Ciape.Banco {
 
         }
 
-        public static bool CorrigirRevisao(int id) {
+        public static bool CorrigirRevisao(int id, string correcao) {
 
-            string sql = "Update Revisao set Status='Corrigir' where Id=@id";
+            string sql = "Update Revisao set Status='Corrigir', Corrigir=@correcao where Id=@id";
+            SqlCeCommand comando = new SqlCeCommand(sql, con);
+
+            comando.Parameters.Add("@id", id);
+            comando.Parameters.Add("@correcao", correcao);
+
+            con.Open();
+            if (comando.ExecuteNonQuery() > 0) {
+                con.Close();
+                return true;
+            }
+            else {
+                con.Close();
+                return false;
+            }
+        }
+
+
+        public static bool CorrigidoRev(int id) {
+
+            string sql = "Update Revisao set Status='Pendente' where Id=@id";
             SqlCeCommand comando = new SqlCeCommand(sql, con);
 
             comando.Parameters.Add("@id", id);

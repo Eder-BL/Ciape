@@ -39,6 +39,7 @@
             this.btnCorrigir = new System.Windows.Forms.Button();
             this.tabAprovados = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnATT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRevisao)).BeginInit();
             this.tabRevisao.SuspendLayout();
             this.tabCorrigir.SuspendLayout();
@@ -172,6 +173,7 @@
             this.btnPendente.TabIndex = 8;
             this.btnPendente.Text = "Enviar para aprovação";
             this.btnPendente.UseVisualStyleBackColor = false;
+            this.btnPendente.Click += new System.EventHandler(this.btnPendente_Click);
             // 
             // dgvCorrigir
             // 
@@ -179,12 +181,13 @@
             this.dgvCorrigir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCorrigir.Location = new System.Drawing.Point(3, 6);
             this.dgvCorrigir.Name = "dgvCorrigir";
+            this.dgvCorrigir.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCorrigir.Size = new System.Drawing.Size(736, 236);
             this.dgvCorrigir.TabIndex = 0;
             // 
             // tabPendentes
             // 
-            this.tabPendentes.BackColor = System.Drawing.Color.Transparent;
+            this.tabPendentes.BackColor = System.Drawing.Color.White;
             this.tabPendentes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPendentes.Controls.Add(this.btnExcluir);
             this.tabPendentes.Controls.Add(this.btnCorrigir);
@@ -201,6 +204,7 @@
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
@@ -239,6 +243,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -247,11 +252,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(737, 283);
             this.dataGridView1.TabIndex = 1;
             // 
+            // btnATT
+            // 
+            this.btnATT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(0)))));
+            this.btnATT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnATT.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.btnATT.ForeColor = System.Drawing.Color.White;
+            this.btnATT.Location = new System.Drawing.Point(655, 309);
+            this.btnATT.Name = "btnATT";
+            this.btnATT.Size = new System.Drawing.Size(118, 36);
+            this.btnATT.TabIndex = 8;
+            this.btnATT.Text = "Atualizar";
+            this.btnATT.UseVisualStyleBackColor = false;
+            this.btnATT.Click += new System.EventHandler(this.btnATT_Click);
+            // 
             // Revisao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnATT);
             this.Controls.Add(this.tabRevisao);
             this.Controls.Add(this.lblErros);
             this.Controls.Add(this.btnSalvar);
@@ -291,5 +311,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCorrigir;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnATT;
     }
 }

@@ -24,12 +24,13 @@ namespace Ciape {
             dgvCorrigir.DataSource = Banco.RevisaoDataAccess.PegarCorrecoes();
         }
 
-        private void label3_Click(object sender, EventArgs e) {
+         private void label3_Click(object sender, EventArgs e) {
 
         }
 
         private void Revisao_Load(object sender, EventArgs e) {
-
+           
+            
         }
 
         private void btnSalvar_Click(object sender, EventArgs e) {
@@ -70,6 +71,7 @@ namespace Ciape {
             CorrigirOQ corr = new CorrigirOQ();
             corr.lblID.Text = this.dgvRevisao.CurrentRow.Cells[0].Value.ToString();
             corr.ShowDialog();
+            AtualizarTabela();
 
         }
 
@@ -81,6 +83,8 @@ namespace Ciape {
             AtualizarTabela();
 
         }
+
+        //===================TEXTBOX DE SALVAR LINK=====================//
 
         private void txtDescricao_Enter(object sender, EventArgs e) {
             var campo = (TextBox)sender;
@@ -113,11 +117,30 @@ namespace Ciape {
                 campo.ForeColor = Color.Silver;
             }
         }
+        //===================TAB CORRIGIR BOTAO ENVIAR PARA APROVAÇÃO=====================//
+
+        private void btnPendente_Click(object sender, EventArgs e) {
+            try {
+                int id = (int)dgvCorrigir.SelectedRows[0].Cells[0].Value;
+                Banco.RevisaoDataAccess.CorrigidoRev(id);
+                AtualizarTabela();
+
+            }
+            catch {
+                MessageBox.Show("Erro no envio das informações!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
-    //===================PEGAR DADOS DO DGV PARA CORRIGIR=====================//
+        //===================PEGAR DADOS DO DGV PARA CORRIGIR=====================//
         private void dgvRevisao_CellContentClick(object sender, DataGridViewCellEventArgs e) {
       
         }
+
+        private void btnATT_Click(object sender, EventArgs e) {
+            AtualizarTabela();
+        }
+
+
     }
 }
