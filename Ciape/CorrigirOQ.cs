@@ -40,5 +40,9 @@ namespace Ciape {
         private void CorrigirOQ_Load(object sender, EventArgs e) {
 
         }
+
+        private void txtCorrecoes_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }

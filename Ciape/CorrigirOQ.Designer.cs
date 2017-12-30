@@ -23,12 +23,14 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.btnCorrige = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCorrecoes = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SuspendLayout();
             // 
             // btnCorrige
@@ -62,8 +64,10 @@
             this.txtCorrecoes.Location = new System.Drawing.Point(12, 33);
             this.txtCorrecoes.Multiline = true;
             this.txtCorrecoes.Name = "txtCorrecoes";
+            this.txtCorrecoes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCorrecoes.Size = new System.Drawing.Size(356, 187);
             this.txtCorrecoes.TabIndex = 2;
+            this.txtCorrecoes.TextChanged += new System.EventHandler(this.txtCorrecoes_TextChanged);
             // 
             // label2
             // 
@@ -92,6 +96,7 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
             this.btnFechar.Location = new System.Drawing.Point(354, -1);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(29, 31);
@@ -99,6 +104,11 @@
             this.btnFechar.Text = "x";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // CorrigirOQ
             // 
@@ -130,5 +140,6 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnFechar;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

@@ -17,7 +17,7 @@ namespace Ciape.Banco {
 
         public static DataTable PegarRevisoes() {
 
-            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT Id, Descricao Descrição, Link, Status, DataCadastro Cadastro FROM Revisao WHERE Status='Pendente'", con);
+            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT Id, Descricao Descrição, Link, Corrigir, Status, DataCadastro Cadastro FROM Revisao WHERE Status='Pendente'", con);
             DataSet ds = new DataSet();
 
             da.Fill(ds);
@@ -34,6 +34,18 @@ namespace Ciape.Banco {
 
             return ds.Tables[0];
         }
+
+        public static DataTable PegarAprovados() {
+
+            SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT Id, Descricao Descrição, Link, Status, DataCadastro Cadastro, DataAtualizacao Atualização FROM Revisao WHERE Status='Aprovado'", con);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds);
+
+            return ds.Tables[0];
+        }
+
+
 
         public static bool ExcluirRevisao(int id) {
             string sql = "Delete from Revisao where Id=@id";
@@ -100,6 +112,29 @@ namespace Ciape.Banco {
             SqlCeCommand comando = new SqlCeCommand(sql, con);
 
             comando.Parameters.Add("@id", id);
+
+            con.Open();
+            if (comando.ExecuteNonQuery() > 0) {
+                con.Close();
+                return true;
+            }
+            else {
+                con.Close();
+                return false;
+            }
+        }
+
+        public static bool AprovadoRev(int id) {
+
+            string sql = "Update Revisao set Status='Aprovado', DataAtualizacao=@DataAtualizacao where Id=@id";
+            SqlCeCommand comando = new SqlCeCommand(sql, con);
+
+            DateTime DataAtualizacao = DateTime.Now;
+            string Status = "Aprovado";
+
+            comando.Parameters.Add("@id", id);
+            comando.Parameters.Add("@Status", Status);
+            comando.Parameters.Add("@DataAtualizacao", DataAtualizacao);
 
             con.Open();
             if (comando.ExecuteNonQuery() > 0) {

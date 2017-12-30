@@ -35,9 +35,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblUltimoContato = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblQuantidadeRevisar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPendencias
@@ -172,47 +169,11 @@
             this.lblUltimoContato.Text = "15/12";
             this.lblUltimoContato.Click += new System.EventHandler(this.label12_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label13.Location = new System.Drawing.Point(621, 422);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 19);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Revisão";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.label14.Location = new System.Drawing.Point(587, 396);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(125, 22);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Quantidade";
-            // 
-            // lblQuantidadeRevisar
-            // 
-            this.lblQuantidadeRevisar.AutoSize = true;
-            this.lblQuantidadeRevisar.Font = new System.Drawing.Font("Century Gothic", 48F);
-            this.lblQuantidadeRevisar.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantidadeRevisar.Location = new System.Drawing.Point(615, 314);
-            this.lblQuantidadeRevisar.Name = "lblQuantidadeRevisar";
-            this.lblQuantidadeRevisar.Size = new System.Drawing.Size(68, 78);
-            this.lblQuantidadeRevisar.TabIndex = 12;
-            this.lblQuantidadeRevisar.Text = "6";
-            this.lblQuantidadeRevisar.Click += new System.EventHandler(this.label15_Click);
-            // 
             // Painel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.lblQuantidadeRevisar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lblUltimoContato);
@@ -246,8 +207,5 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblUltimoContato;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblQuantidadeRevisar;
     }
 }

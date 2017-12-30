@@ -23,6 +23,7 @@
         /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,6 +42,7 @@
             this.pnRevisao = new Ciape.Revisao();
             this.pnSobre = new Ciape.Sobre();
             this.pnSeparar = new Ciape.Separar();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -256,6 +258,11 @@
             this.pnSeparar.Size = new System.Drawing.Size(806, 658);
             this.pnSeparar.TabIndex = 8;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +307,7 @@
         private Envios pnEnvios;
         private Separar pnSeparar;
         private System.Windows.Forms.Button btnSeparar;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 
