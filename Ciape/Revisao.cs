@@ -26,11 +26,14 @@ namespace Ciape {
             AtualizarTabela();
         }
 
+     
+
         public void AtualizarTabela() {
             dgvRevisao.DataSource = Banco.RevisaoDataAccess.PegarRevisoes();
             dgvCorrigir.DataSource = Banco.RevisaoDataAccess.PegarCorrecoes();
             dgvAprovado.DataSource = Banco.RevisaoDataAccess.PegarAprovados();
         }
+
 
         private void label3_Click(object sender, EventArgs e) {
 

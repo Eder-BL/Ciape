@@ -49,9 +49,11 @@ namespace Ciape {
             painelVisivel(pnSobre);
         }
 
+       
         private void btnPainel_Click(object sender, EventArgs e) {
             MoverIndicador((Button)sender);
             painelVisivel(pnPainel);
+            pnPainel.AtualizarDash(); // ATUALIZA DASHBOARD DE REVISÕES 
         }
 
         //=========Indicador Laranja do MENU============//

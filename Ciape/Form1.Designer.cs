@@ -36,13 +36,13 @@
             this.btnPainel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.pnPainel = new Ciape.Painel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnEnvios = new Ciape.Envios();
             this.pnUrgente = new Ciape.Urgente();
             this.pnRevisao = new Ciape.Revisao();
             this.pnSobre = new Ciape.Sobre();
             this.pnSeparar = new Ciape.Separar();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pnPainel = new Ciape.Painel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -209,14 +209,10 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // pnPainel
+            // bunifuElipse1
             // 
-            this.pnPainel.BackColor = System.Drawing.Color.White;
-            this.pnPainel.Location = new System.Drawing.Point(214, 21);
-            this.pnPainel.Name = "pnPainel";
-            this.pnPainel.Size = new System.Drawing.Size(806, 658);
-            this.pnPainel.TabIndex = 3;
-            this.pnPainel.Load += new System.EventHandler(this.painel1_Load);
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // pnEnvios
             // 
@@ -258,10 +254,14 @@
             this.pnSeparar.Size = new System.Drawing.Size(806, 658);
             this.pnSeparar.TabIndex = 8;
             // 
-            // bunifuElipse1
+            // pnPainel
             // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
+            this.pnPainel.BackColor = System.Drawing.Color.White;
+            this.pnPainel.Location = new System.Drawing.Point(214, 21);
+            this.pnPainel.Name = "pnPainel";
+            this.pnPainel.Size = new System.Drawing.Size(806, 658);
+            this.pnPainel.TabIndex = 3;
+            this.pnPainel.Load += new System.EventHandler(this.painel1_Load);
             // 
             // Form1
             // 
@@ -299,7 +299,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnSobre;
-        private Painel pnPainel;
         private Revisao pnRevisao;
         private Sobre pnSobre;
         private System.Windows.Forms.Panel pnIndicador;
@@ -308,6 +307,7 @@
         private Separar pnSeparar;
         private System.Windows.Forms.Button btnSeparar;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Painel pnPainel;
     }
 }
 

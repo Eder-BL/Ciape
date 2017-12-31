@@ -26,33 +26,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dgvRevisao = new System.Windows.Forms.DataGridView();
+            this.Id1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Link1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Corrigir1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataCadastro1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAprovar = new System.Windows.Forms.Button();
             this.lblErros = new System.Windows.Forms.Label();
             this.tabRevisao = new System.Windows.Forms.TabControl();
             this.tabCorrigir = new System.Windows.Forms.TabPage();
             this.btnPendente = new System.Windows.Forms.Button();
             this.dgvCorrigir = new System.Windows.Forms.DataGridView();
-            this.tabPendentes = new System.Windows.Forms.TabPage();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnCorrigir = new System.Windows.Forms.Button();
-            this.tabAprovados = new System.Windows.Forms.TabPage();
-            this.dgvAprovado = new System.Windows.Forms.DataGridView();
-            this.txtDescricao = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtLink = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.Id1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Link1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Corrigir1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataCadastro1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Link2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataCadastro2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataAtualização = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Corrigir = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPendentes = new System.Windows.Forms.TabPage();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCorrigir = new System.Windows.Forms.Button();
+            this.tabAprovados = new System.Windows.Forms.TabPage();
+            this.dgvAprovado = new System.Windows.Forms.DataGridView();
+            this.Descricao2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Link2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataCadastro2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataAtualização = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDescricao = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtLink = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRevisao)).BeginInit();
             this.tabRevisao.SuspendLayout();
             this.tabCorrigir.SuspendLayout();
@@ -106,6 +106,42 @@
             this.dgvRevisao.TabIndex = 4;
             this.dgvRevisao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRevisao_CellContentClick);
             this.dgvRevisao.DoubleClick += new System.EventHandler(this.dgvRevisao_DoubleClick);
+            // 
+            // Id1
+            // 
+            this.Id1.DataPropertyName = "Id";
+            this.Id1.HeaderText = "Id";
+            this.Id1.Name = "Id1";
+            this.Id1.Visible = false;
+            // 
+            // Descricao1
+            // 
+            this.Descricao1.DataPropertyName = "Descrição";
+            this.Descricao1.HeaderText = "Descrição";
+            this.Descricao1.Name = "Descricao1";
+            this.Descricao1.Width = 250;
+            // 
+            // Link1
+            // 
+            this.Link1.DataPropertyName = "Link";
+            this.Link1.HeaderText = "Link";
+            this.Link1.Name = "Link1";
+            this.Link1.Width = 310;
+            // 
+            // Corrigir1
+            // 
+            this.Corrigir1.DataPropertyName = "Corrigir";
+            this.Corrigir1.HeaderText = "Corrigir";
+            this.Corrigir1.Name = "Corrigir1";
+            this.Corrigir1.Visible = false;
+            this.Corrigir1.Width = 150;
+            // 
+            // DataCadastro1
+            // 
+            this.DataCadastro1.DataPropertyName = "Cadastro";
+            this.DataCadastro1.HeaderText = "Cadastro";
+            this.DataCadastro1.Name = "DataCadastro1";
+            this.DataCadastro1.Width = 120;
             // 
             // btnAprovar
             // 
@@ -195,6 +231,42 @@
             this.dgvCorrigir.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCorrigir_CellContentClick);
             this.dgvCorrigir.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCorrigir_CellDoubleClick);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            this.Id.Width = 30;
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "Descrição";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.Width = 190;
+            // 
+            // Link
+            // 
+            this.Link.DataPropertyName = "Link";
+            this.Link.HeaderText = "Link";
+            this.Link.Name = "Link";
+            this.Link.Width = 250;
+            // 
+            // Corrigir
+            // 
+            this.Corrigir.DataPropertyName = "Corrigir";
+            this.Corrigir.HeaderText = "Corrigir";
+            this.Corrigir.Name = "Corrigir";
+            this.Corrigir.Width = 120;
+            // 
+            // DataCadastro
+            // 
+            this.DataCadastro.DataPropertyName = "Cadastro";
+            this.DataCadastro.HeaderText = "Cadastro";
+            this.DataCadastro.Name = "DataCadastro";
+            this.DataCadastro.Width = 120;
+            // 
             // tabPendentes
             // 
             this.tabPendentes.BackColor = System.Drawing.Color.White;
@@ -269,6 +341,34 @@
             this.dgvAprovado.TabIndex = 1;
             this.dgvAprovado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAprovado_CellContentClick);
             // 
+            // Descricao2
+            // 
+            this.Descricao2.DataPropertyName = "Descrição";
+            this.Descricao2.HeaderText = "Descrição";
+            this.Descricao2.Name = "Descricao2";
+            this.Descricao2.Width = 190;
+            // 
+            // Link2
+            // 
+            this.Link2.DataPropertyName = "Link";
+            this.Link2.HeaderText = "Link";
+            this.Link2.Name = "Link2";
+            this.Link2.Width = 250;
+            // 
+            // DataCadastro2
+            // 
+            this.DataCadastro2.DataPropertyName = "Cadastro";
+            this.DataCadastro2.HeaderText = "Cadastro";
+            this.DataCadastro2.Name = "DataCadastro2";
+            this.DataCadastro2.Width = 120;
+            // 
+            // DataAtualização
+            // 
+            this.DataAtualização.DataPropertyName = "Atualização";
+            this.DataAtualização.HeaderText = "Aprovação";
+            this.DataAtualização.Name = "DataAtualização";
+            this.DataAtualização.Width = 120;
+            // 
             // txtDescricao
             // 
             this.txtDescricao.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -312,106 +412,6 @@
             this.txtLink.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtLink.Enter += new System.EventHandler(this.txtLink_Enter);
             this.txtLink.Leave += new System.EventHandler(this.txtLink_Leave);
-            // 
-            // Id1
-            // 
-            this.Id1.DataPropertyName = "Id";
-            this.Id1.HeaderText = "Id";
-            this.Id1.Name = "Id1";
-            this.Id1.Visible = false;
-            // 
-            // Descricao1
-            // 
-            this.Descricao1.DataPropertyName = "Descrição";
-            this.Descricao1.HeaderText = "Descrição";
-            this.Descricao1.Name = "Descricao1";
-            this.Descricao1.Width = 250;
-            // 
-            // Link1
-            // 
-            this.Link1.DataPropertyName = "Link";
-            this.Link1.HeaderText = "Link";
-            this.Link1.Name = "Link1";
-            this.Link1.Width = 310;
-            // 
-            // Corrigir1
-            // 
-            this.Corrigir1.DataPropertyName = "Corrigir";
-            this.Corrigir1.HeaderText = "Corrigir";
-            this.Corrigir1.Name = "Corrigir1";
-            this.Corrigir1.Visible = false;
-            this.Corrigir1.Width = 150;
-            // 
-            // DataCadastro1
-            // 
-            this.DataCadastro1.DataPropertyName = "Cadastro";
-            this.DataCadastro1.HeaderText = "Cadastro";
-            this.DataCadastro1.Name = "DataCadastro1";
-            this.DataCadastro1.Width = 120;
-            // 
-            // Descricao2
-            // 
-            this.Descricao2.DataPropertyName = "Descrição";
-            this.Descricao2.HeaderText = "Descrição";
-            this.Descricao2.Name = "Descricao2";
-            this.Descricao2.Width = 190;
-            // 
-            // Link2
-            // 
-            this.Link2.DataPropertyName = "Link";
-            this.Link2.HeaderText = "Link";
-            this.Link2.Name = "Link2";
-            this.Link2.Width = 250;
-            // 
-            // DataCadastro2
-            // 
-            this.DataCadastro2.DataPropertyName = "Cadastro";
-            this.DataCadastro2.HeaderText = "Cadastro";
-            this.DataCadastro2.Name = "DataCadastro2";
-            this.DataCadastro2.Width = 120;
-            // 
-            // DataAtualização
-            // 
-            this.DataAtualização.DataPropertyName = "Atualização";
-            this.DataAtualização.HeaderText = "Aprovação";
-            this.DataAtualização.Name = "DataAtualização";
-            this.DataAtualização.Width = 120;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            this.Id.Width = 30;
-            // 
-            // Descricao
-            // 
-            this.Descricao.DataPropertyName = "Descrição";
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.Width = 190;
-            // 
-            // Link
-            // 
-            this.Link.DataPropertyName = "Link";
-            this.Link.HeaderText = "Link";
-            this.Link.Name = "Link";
-            this.Link.Width = 250;
-            // 
-            // Corrigir
-            // 
-            this.Corrigir.DataPropertyName = "Corrigir";
-            this.Corrigir.HeaderText = "Corrigir";
-            this.Corrigir.Name = "Corrigir";
-            this.Corrigir.Width = 120;
-            // 
-            // DataCadastro
-            // 
-            this.DataCadastro.DataPropertyName = "Cadastro";
-            this.DataCadastro.HeaderText = "Cadastro";
-            this.DataCadastro.Name = "DataCadastro";
-            this.DataCadastro.Width = 120;
             // 
             // Revisao
             // 

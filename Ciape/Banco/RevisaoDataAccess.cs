@@ -45,8 +45,6 @@ namespace Ciape.Banco {
             return ds.Tables[0];
         }
 
-
-
         public static bool ExcluirRevisao(int id) {
             string sql = "Delete from Revisao where Id=@id";
             SqlCeCommand comando = new SqlCeCommand(sql, con);
@@ -147,6 +145,55 @@ namespace Ciape.Banco {
             }
         }
 
+        //===============================INÍCIO DashBoard===============================//
+
+        public static DataTable RevCountTotal() {
+            
+            var da = new SqlCeDataAdapter("SELECT COUNT(ID) FROM Revisao", con);
+            var ds = new DataSet();
+            da.Fill(ds);
+
+            return ds.Tables[0];
+        }
+
+        public static DataTable RevCountPendentes() {
+            
+            var da = new SqlCeDataAdapter("SELECT COUNT(ID) FROM Revisao where Status='Pendente'", con);
+            var ds = new DataSet();
+            da.Fill(ds);
+
+            return ds.Tables[0];
+        }
+
+        public static DataTable RevCountCorrigir() {
+            
+            var da = new SqlCeDataAdapter("SELECT COUNT(ID) FROM Revisao where Status='Corrigir'", con);
+            var ds = new DataSet();
+            da.Fill(ds);
+
+            return ds.Tables[0];
+        }
+
+        public static DataTable RevCountLinksCorrigidos() {
+            //"SELECT COUNT(Id) FROM Revisao where Corrigir is not null"
+            var da = new SqlCeDataAdapter("SELECT COUNT(Id) FROM Revisao where Corrigir is not null", con);
+            var ds = new DataSet();
+            da.Fill(ds);
+
+            return ds.Tables[0];
+        }
+
+        public static DataTable RevCountLinksSemCorrecao() {
+            //"SELECT COUNT(Id) FROM Revisao where Corrigir is null"
+            var da = new SqlCeDataAdapter("SELECT COUNT(Id) FROM Revisao where Corrigir is null", con);
+            var ds = new DataSet();
+            da.Fill(ds);
+
+            return ds.Tables[0];
+        }
+
+
+        //===============================FIM DashBoard===============================//
 
     }
 }
